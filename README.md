@@ -18,10 +18,11 @@ This project uses Terraform to create an AWS S3 bucket with Object Lock for immu
 ## Setup Instructions
 
 ### 1. Clone the Repository:
-    bash
-
+    
+```
 git clone https://github.com/alexeysirenko/prjctr-25-aws-s3.git
 cd prjctr-25-aws-s3
+```
 ### 2. Initialize Terraform:
 bash
 terraform init
