@@ -1,39 +1,38 @@
-# HSA13_hw25_aws_s3
-
-Project 25: AWS S3 Immutable Storage
+# HSA13_hw25: AWS S3 Immutable Storage
 
 This project uses Terraform to create an AWS S3 bucket with Object Lock for immutable storage and server access logging. It includes a script to test the Write-Once-Read-Many (WORM) policy and verify logging functionality.
-Features
+
+## Features
 
     Immutable Storage: Objects are protected with Object Lock in COMPLIANCE mode.
     Versioning: Enabled to maintain object history.
     Access Logging: All requests are logged to a separate bucket.
     Testing Script: Verifies WORM policy and logging functionality.
 
-Prerequisites
+## Prerequisites
 
     Terraform (v1.0+ recommended).
     AWS CLI configured with IAM credentials (access key and secret key).
     Bash shell for running the test script.
 
-Setup Instructions
+## Setup Instructions
 
-    Clone the Repository:
+### 1. Clone the Repository:
     bash
 
 git clone https://github.com/alexeysirenko/prjctr-25-aws-s3.git
 cd prjctr-25-aws-s3
-Initialize Terraform:
+### 2. Initialize Terraform:
 bash
 terraform init
-Deploy Resources:
+### 3. Deploy Resources:
 bash
 terraform apply
 Confirm with yes to create the buckets.
-List Created Buckets:
+### 4. List Created Buckets:
 bash
 aws s3 ls
-Run Tests:
+### 5. Run Tests:
 
     Make the test script executable:
     bash
@@ -50,13 +49,13 @@ bash
         Check the contents of both versions.
         Check for access logs (note: logs may take 30-60 minutes to appear).
 
-Cleanup (optional):
+### 6. Cleanup (optional):
 bash
 
     terraform destroy
     Confirm with yes to remove all resources.
 
-Expected Test Results
+## Expected Test Results
 
     WORM Policy:
         Deletion attempts for both file versions return "Access Denied".
