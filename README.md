@@ -38,7 +38,7 @@ aws s3 ls
 ```
 ### 5. Run Tests:
 
-    Make the test script executable:
+Make the test script executable:
     
 ```
 chmod +x test-worm.sh
