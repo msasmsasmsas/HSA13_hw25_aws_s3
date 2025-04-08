@@ -55,9 +55,9 @@ bash
     terraform destroy
     Confirm with yes to remove all resources.
 
-### 1. Alternative Setup with Python
+## Alternative Setup with Python
 
-    Configure AWS CLI:
+### 1. Configure AWS CLI:
         Ensure AWS CLI is installed and configured with your credentials:
         bash
 
