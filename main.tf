@@ -54,7 +54,7 @@ resource "aws_s3_bucket_logging" "main_logging" {
   bucket = aws_s3_bucket.main_bucket.id
   
   target_bucket = aws_s3_bucket.log_bucket.id
-  target_prefix = "logs/"
+  target_prefix = "s3-access-logs/"
 }
 
 # Policy to allow S3 logging service to write to the log bucket
